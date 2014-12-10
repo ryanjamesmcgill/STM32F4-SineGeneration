@@ -1,7 +1,6 @@
 #include "main.h"
 
 const uint16_t LEDS = GPIO_Pin_1;
-const uint16_t LED[1] = {GPIO_Pin_1};
 const long LED_COUNT = 1;
 
 int main()
@@ -24,9 +23,10 @@ void loop()
         counter++;
 
         GPIO_ResetBits(GPIOC, LEDS);
-        GPIO_SetBits(GPIOC, LED[counter % 2]);
+        if(counter % 2)
+        	{GPIO_SetBits(GPIOC, LEDS);}
 
-        delay(10);
+        delay(500);
     };
 }
 

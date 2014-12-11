@@ -16,9 +16,9 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.1711904051." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.debug.2078096891" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.debug">
 							<option id="cdt.managedbuild.option.gnu.cross.prefix.521104251" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="arm-none-eabi-" valueType="string"/>
-							<option id="cdt.managedbuild.option.gnu.cross.path.426206209" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="/Users/RyanJamesMcGill/Desktop/armstrap/gcc-arm-none-eabi-4_8-2014q3/bin" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.426206209" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="/Users/RyanJamesMcGill/Desktop/armstrap/Projects/gcc-arm/bin" valueType="string"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.559623963" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
-							<builder buildPath="${workspace_loc:/myArmstrap}/Debug" id="org.eclipse.cdt.build.core.internal.builder.1557103952" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+							<builder buildPath="${workspace_loc:/myArmstrap}/Debug" id="org.eclipse.cdt.build.core.internal.builder.1557103952" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.15284325" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.322871959" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.debugging.level.807803250" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
@@ -32,8 +32,8 @@
 									<listOptionValue builtIn="false" value="ARM_MATH_CM4"/>
 									<listOptionValue builtIn="false" value="USE_STDPERIPH_DRIVER"/>
 								</option>
-								<option id="gnu.c.compiler.option.dialect.std.1418731793" superClass="gnu.c.compiler.option.dialect.std" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.misc.other.260440114" superClass="gnu.c.compiler.option.misc.other" value="-c -fno-common -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -MD" valueType="string"/>
+								<option id="gnu.c.compiler.option.dialect.std.1418731793" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.misc.other.260440114" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c -fno-common -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -MD" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.915385079" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1399085019" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
@@ -41,10 +41,10 @@
 								<option id="gnu.cpp.compiler.option.debugging.level.463237159" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.1863675706" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker">
-								<option id="gnu.c.link.option.paths.177954944" superClass="gnu.c.link.option.paths" valueType="libPaths">
+								<option id="gnu.c.link.option.paths.177954944" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/scripts}&quot;"/>
 								</option>
-								<option id="gnu.c.link.option.ldflags.1736748720" superClass="gnu.c.link.option.ldflags" value="-Tstm32_flash.ld -nostartfiles -Wl,--gc-sections -mthumb -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16" valueType="string"/>
+								<option id="gnu.c.link.option.ldflags.1736748720" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-Tstm32_flash.ld -nostartfiles -Wl,--gc-sections -mthumb -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.877286046" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -53,7 +53,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.693016794" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker"/>
 							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.1697692950" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
 							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.348397086" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
-								<option id="gnu.both.asm.option.flags.563031634" superClass="gnu.both.asm.option.flags" value="-mcpu=cortex-m4 -mthumb" valueType="string"/>
+								<option id="gnu.both.asm.option.flags.563031634" name="Assembler flags" superClass="gnu.both.asm.option.flags" value="-mcpu=cortex-m4 -mthumb" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.564346939" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 						</toolChain>
@@ -122,4 +122,6 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>

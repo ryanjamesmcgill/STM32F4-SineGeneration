@@ -92,7 +92,7 @@ void initialize_ext_interrupt()
 
     EXTI_InitStructure.EXTI_Line = EXTI_Line0;
     EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-    EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
+    EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
     EXTI_InitStructure.EXTI_LineCmd = ENABLE;
     EXTI_Init(&EXTI_InitStructure);
 
@@ -104,6 +104,8 @@ void initialize_ext_interrupt()
     NVIC_Init(&NVIC_InitStructure);
 }
 
+
+
 void delay(uint32_t ms)
 {
     ms *= 3360;
@@ -112,7 +114,7 @@ void delay(uint32_t ms)
     }
 }
 
-extern "C" void EXTI0_IRQHandler()
+void EXTI0_IRQHandler()
 {
     if (EXTI_GetITStatus(EXTI_Line0) != RESET) {
         GPIO_ToggleBits(GPIOC, GPIO_Pin_1);

@@ -37,6 +37,7 @@ extern uint16_t AUDIO_SAMPLE[];
 void setup();
 void loop();
 void delay(uint32_t ms);
+void generateArray(uint16_t* array);
 
 void initialize_led();
 void initialize_button();

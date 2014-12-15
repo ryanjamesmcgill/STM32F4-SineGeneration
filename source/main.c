@@ -30,22 +30,40 @@ THE SOFTWARE.
 #include "stm32f4xx_spi.h"
 #include "stm32f4xx_i2c.h"
 #include "misc.h"
-//#include "audio_sample.c"
+#include <math.h>
 
-uint16_t* sample = AUDIO_SAMPLE;
-int i = 0;
-int arraysize = 25542;
+
 
 int main()
 {
     setup();
-    do
-    {
-        loop();
-    }
-    while (1);
 
+    uint16_t SAMPLE[480];
+    generateArray(SAMPLE);
+    int i = 0;
+
+    while (1)
+    {
+    	if(SPI_I2S_GetFlagStatus(SPI3, SPI_I2S_FLAG_TXE))
+    		{
+    			SPI_I2S_SendData(SPI3, SAMPLE[i]);
+    			i++;
+    			if(i>=480) i = 0;
+    		}
+        //loop();
+    }
     return 0; // never reached
+}
+
+void generateArray(uint16_t* AUDIO_SAMPLE){
+	int Amp = 30000;
+	int i;
+	for(i=0; i <= 480; i++){
+		if(i%2)
+			AUDIO_SAMPLE[i] = Amp + Amp*sin(2*3.14*i/240);
+		else
+			AUDIO_SAMPLE[i]=0;
+	}
 }
 
 void setup()
@@ -58,12 +76,7 @@ void setup()
 
 void loop()
 {
-	if(SPI_I2S_GetFlagStatus(SPI3, SPI_I2S_FLAG_TXE))
-	{
-		SPI_I2S_SendData(SPI3, sample[i]);
-		i++;
-		if(i>arraysize) i = 0;
-	}
+
 }
 
 void initialize_led()

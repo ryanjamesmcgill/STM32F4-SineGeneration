@@ -23,6 +23,17 @@ THE SOFTWARE.
 */
 #include "stm32f4xx.h"
 
+
+//pins for I2S
+#define I2S3_WS_PIN 	GPIO_Pin_4   //port A
+#define I2S3_MCLK_PIN 	GPIO_Pin_7   //port C
+#define I2S3_SCLK_PIN 	GPIO_Pin_10  //port C
+#define I2S3_SD_PIN 	GPIO_Pin_12  //port C
+
+/* This is an audio file stored in the Flash memory as a constant table of 16-bit data.
+   The audio format should be WAV (raw / PCM) 16-bits, Stereo (sampling rate may be modified) */
+extern uint16_t AUDIO_SAMPLE[];
+
 void setup();
 void loop();
 void delay(uint32_t ms);
@@ -30,4 +41,5 @@ void delay(uint32_t ms);
 void initialize_led();
 void initialize_button();
 void initialize_ext_interrupt();
+void initialize_I2S();
 

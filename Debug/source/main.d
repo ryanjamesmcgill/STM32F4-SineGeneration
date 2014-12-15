@@ -15,4 +15,6 @@ source/main.o: ../source/main.c ../source/main.h \
  /Users/RyanJamesMcGill/Desktop/armstrap/Projects/workspace/myArmstrap/includes/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h \
  /Users/RyanJamesMcGill/Desktop/armstrap/Projects/workspace/myArmstrap/includes/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_syscfg.h \
  /Users/RyanJamesMcGill/Desktop/armstrap/Projects/workspace/myArmstrap/includes/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_exti.h \
+ /Users/RyanJamesMcGill/Desktop/armstrap/Projects/workspace/myArmstrap/includes/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h \
+ /Users/RyanJamesMcGill/Desktop/armstrap/Projects/workspace/myArmstrap/includes/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h \
  /Users/RyanJamesMcGill/Desktop/armstrap/Projects/workspace/myArmstrap/includes/STM32F4xx_StdPeriph_Driver/inc/misc.h

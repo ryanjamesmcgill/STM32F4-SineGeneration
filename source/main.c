@@ -38,31 +38,33 @@ int main()
 {
     setup();
 
-    uint16_t SAMPLE[480];
+    int SAMPLE[120];
     generateArray(SAMPLE);
     int i = 0;
-
     while (1)
     {
     	if(SPI_I2S_GetFlagStatus(SPI3, SPI_I2S_FLAG_TXE))
     		{
     			SPI_I2S_SendData(SPI3, SAMPLE[i]);
     			i++;
-    			if(i>=480) i = 0;
+    			if(i>=120) i = 0;
     		}
         //loop();
     }
     return 0; // never reached
 }
 
-void generateArray(uint16_t* AUDIO_SAMPLE){
-	int Amp = 30000;
+void generateArray(int* AUDIO_SAMPLE){
+	//*IF YOU CHANGE THESE PARAMETERS, YOU MUST ALSO CHANGE THE ARRAY SIZE OF SAMPLES*//
+	int Amp = 10000; //amplitude of wave (within 16bit signed integer)
+	int SR = 48000; //sample rate of I2S channel
+	int freq = 400; //frequency of sine wave you want to produce
 	int i;
-	for(i=0; i <= 480; i++){
+	for(i=0; i <= (2*SR/freq); i++){ //mult SR/Freq by 2 b/c of two channels
 		if(i%2)
-			AUDIO_SAMPLE[i] = Amp + Amp*sin(2*3.14*i/240);
+			AUDIO_SAMPLE[i] = Amp*sin(2*3.14*(i/(2.0*SR/freq))); //right channel
 		else
-			AUDIO_SAMPLE[i]=0;
+			AUDIO_SAMPLE[i]=0; //left channel
 	}
 }
 

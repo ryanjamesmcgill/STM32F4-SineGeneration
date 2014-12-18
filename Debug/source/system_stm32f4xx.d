@@ -1,10 +1,10 @@
 source/system_stm32f4xx.o: ../source/system_stm32f4xx.c \
  /Users/RyanJamesMcGill/Desktop/armstrap/Projects/workspace/myArmstrap/includes/STM32F4xx/stm32f4xx.h \
  /Users/RyanJamesMcGill/Desktop/armstrap/Projects/workspace/myArmstrap/includes/CMSIS/core_cm4.h \
- /Users/RyanJamesMcGill/Desktop/armstrap/gcc-arm-none-eabi-4_8-2014q3/lib/gcc/arm-none-eabi/4.8.4/include/stdint.h \
- /Users/RyanJamesMcGill/Desktop/armstrap/gcc-arm-none-eabi-4_8-2014q3/arm-none-eabi/include/stdint.h \
- /Users/RyanJamesMcGill/Desktop/armstrap/gcc-arm-none-eabi-4_8-2014q3/arm-none-eabi/include/machine/_default_types.h \
- /Users/RyanJamesMcGill/Desktop/armstrap/gcc-arm-none-eabi-4_8-2014q3/arm-none-eabi/include/sys/features.h \
+ /Users/RyanJamesMcGill/Desktop/armstrap/Projects/gcc-arm/lib/gcc/arm-none-eabi/4.8.4/include/stdint.h \
+ /Users/RyanJamesMcGill/Desktop/armstrap/Projects/gcc-arm/arm-none-eabi/include/stdint.h \
+ /Users/RyanJamesMcGill/Desktop/armstrap/Projects/gcc-arm/arm-none-eabi/include/machine/_default_types.h \
+ /Users/RyanJamesMcGill/Desktop/armstrap/Projects/gcc-arm/arm-none-eabi/include/sys/features.h \
  /Users/RyanJamesMcGill/Desktop/armstrap/Projects/workspace/myArmstrap/includes/CMSIS/core_cmInstr.h \
  /Users/RyanJamesMcGill/Desktop/armstrap/Projects/workspace/myArmstrap/includes/CMSIS/core_cmFunc.h \
  /Users/RyanJamesMcGill/Desktop/armstrap/Projects/workspace/myArmstrap/includes/CMSIS/core_cm4_simd.h \

@@ -12,6 +12,8 @@ armStrap C7 - I2S3_MCK <br>
 armStrap C10 - I2S3_SCK <br>
 armStrap C12 - I2S3_SD <br>
 <p>
+The armStrap is a nice alternative to the STM32F4 Discovery board because it allows you develop on tools that are all free (and on OSX!). More info: (http://armstrap.org/)
+<p>
 For the DAC, I used a board based on the Cirrus Logic CS4334 made by Sure electronics. But you should be able
 to use any board/chip that accepts I2S input, and audio output!
 (http://www.amazon.com/Sure-Electronics-CS4334-stereo-amplifier/dp/B00KMT4NE8)

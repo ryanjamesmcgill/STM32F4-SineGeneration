@@ -16,7 +16,7 @@ For the DAC, I used a board based on the Cirrus Logic CS4334 made by Sure electr
 to use any board/chip that accepts I2S input, and audio output!
 (http://www.amazon.com/Sure-Electronics-CS4334-stereo-amplifier/dp/B00KMT4NE8)
 <center>
-![img_2003](https://cloud.githubusercontent.com/assets/6580936/5514052/d41bdf5c-87e3-11e4-8300-76a90fcae725.JPG)
+![src](https://cloud.githubusercontent.com/assets/6580936/5514052/d41bdf5c-87e3-11e4-8300-76a90fcae725.JPG)
 ![fullsizerender](https://cloud.githubusercontent.com/assets/6580936/5514053/d8996720-87e3-11e4-93ac-14b0fa5991ed.jpg)
 </center>
 

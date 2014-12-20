@@ -38,7 +38,7 @@ int main()
 {
     setup();
 
-    int SAMPLE[120];
+    int SAMPLE[240];
     generateArray(SAMPLE);
     int i = 0;
     while (1)
@@ -47,9 +47,9 @@ int main()
     		{
     			SPI_I2S_SendData(SPI3, SAMPLE[i]);
     			i++;
-    			if(i>=120) i = 0;
+    			if(i>=240) i = 0;
     		}
-        //loop();
+
     }
     return 0; // never reached
 }
@@ -76,10 +76,7 @@ void setup()
     initialize_I2S();
 }
 
-void loop()
-{
 
-}
 
 void initialize_led()
 {

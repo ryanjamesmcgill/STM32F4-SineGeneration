@@ -22,7 +22,6 @@ to use any board/chip that accepts I2S input, and audio output!
 
 <p><center>
 <img src="https://cloud.githubusercontent.com/assets/6580936/5514052/d41bdf5c-87e3-11e4-8300-76a90fcae725.JPG" alt="Prototype Demo">
-![src](https://cloud.githubusercontent.com/assets/6580936/5514052/d41bdf5c-87e3-11e4-8300-76a90fcae725.JPG)
-![src](https://cloud.githubusercontent.com/assets/6580936/5514053/d8996720-87e3-11e4-93ac-14b0fa5991ed.jpg)
+<img src="https://cloud.githubusercontent.com/assets/6580936/5514053/d8996720-87e3-11e4-93ac-14b0fa5991ed.jpg" alt="Prototype Layout">
 </center></p>
 
